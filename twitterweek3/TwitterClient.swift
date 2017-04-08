@@ -77,7 +77,7 @@ class TwitterClient: BDBOAuth1SessionManager {
                 //print("I got the access token")
                 self.currentAccount(success: { (user: User) in
                     print(user)
-                    //User.currentUser = user
+                    User.currentUser = user
                     self.loginSuccess?()
                     print(user)
                 }, failure: { (error: Error) in

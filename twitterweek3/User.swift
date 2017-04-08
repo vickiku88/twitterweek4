@@ -26,10 +26,8 @@ class User: NSObject {
         tagline = dictionary["description"] as? NSString
     }
     
-}
-
-var _currentUser: User?
-var currentUser: User? {
+    var _currentUser: User?
+    var currentUser: User? {
         get {
             if _currentUser == nil {
                 let defaults = UserDefaults.standard
@@ -46,17 +44,23 @@ var currentUser: User? {
             _currentUser = user
             let defaults = UserDefaults.standard
             if let user = user {
-               let data =  try! JSONSerialization.data(withJSONObject: user.dictionary!, options : [])
+                let data =  try! JSONSerialization.data(withJSONObject: user.dictionary!, options : [])
                 defaults.set(data, forKey: "currentUserData")
             } else {
                 defaults.set(nil, forKey: "currentUserData")
             }
             
-            defaults.set(user,forKey:"currentUser")
+            defaults.set(user, forKey:"currentUser")
             defaults.synchronize()
         }
+        
+    }
+
+
 
 }
+
+
 
 
 
