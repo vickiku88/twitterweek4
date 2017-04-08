@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B4AF0A31E94682A0023767E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0A21E94682A0023767E /* AppDelegate.swift */; };
-		5B4AF0A51E94682A0023767E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0A41E94682A0023767E /* ViewController.swift */; };
 		5B4AF0A81E94682A0023767E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AF0A61E94682A0023767E /* Main.storyboard */; };
 		5B4AF0AA1E94682A0023767E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AF0A91E94682A0023767E /* Assets.xcassets */; };
 		5B4AF0AD1E94682A0023767E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AF0AB1E94682A0023767E /* LaunchScreen.storyboard */; };
@@ -24,7 +23,6 @@
 		0D37FCC7ADE6750FEB0009B8 /* Pods_twitterweek3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitterweek3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4AF09F1E94682A0023767E /* twitterweek3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitterweek3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4AF0A21E94682A0023767E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B4AF0A41E94682A0023767E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B4AF0A71E94682A0023767E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B4AF0A91E94682A0023767E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4AF0AC1E94682A0023767E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		5B4AF0B71E95952F0023767E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5B4AF0A41E94682A0023767E /* ViewController.swift */,
 				5B4AF0B41E94B5BD0023767E /* LoginViewController.swift */,
 				5B4AF0BE1E960FF70023767E /* TweetsViewController.swift */,
 			);
@@ -245,7 +242,6 @@
 				5B4AF0B91E9595700023767E /* User.swift in Sources */,
 				5B4AF0BB1E95957C0023767E /* Tweet.swift in Sources */,
 				5B4AF0B51E94B5BD0023767E /* LoginViewController.swift in Sources */,
-				5B4AF0A51E94682A0023767E /* ViewController.swift in Sources */,
 				5B4AF0BF1E960FF70023767E /* TweetsViewController.swift in Sources */,
 				5B4AF0BD1E95A64E0023767E /* TwitterClient.swift in Sources */,
 				5B4AF0A31E94682A0023767E /* AppDelegate.swift in Sources */,
