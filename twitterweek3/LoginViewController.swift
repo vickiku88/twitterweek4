@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         
         client?.login(success: {
             print("successful login")
-            self.performSegue(withIdentifier: "loginSegue", sender: nil)
+           self.performSegue(withIdentifier: "loginSegue", sender: nil)
             
         }, failure: { (error: Error) in
             print("error \(error.localizedDescription)")
