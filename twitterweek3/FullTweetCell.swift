@@ -1,5 +1,5 @@
 //
-//  TweetCell.swift
+//  FullTweetCell.swift
 //  twitterweek3
 //
 //  Created by Victoria Ku on 4/8/17.
@@ -8,21 +8,8 @@
 
 import UIKit
 
-class TweetCell: UITableViewCell {
+class FullTweetCell: UITableViewCell {
 
-    @IBOutlet weak var profileImg: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var handleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    
-    var user: User? {
-        didSet{
-            nameLabel.text = User?.name
-            
-        }
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
