@@ -20,6 +20,7 @@ class User: NSObject {
     
     var followersCount: Int?
     var followingCount: Int?
+    var created_at: NSString?
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
@@ -32,6 +33,8 @@ class User: NSObject {
         tagline = dictionary["description"] as? NSString
         followersCount = dictionary["followers_count"] as? Int
         followingCount = dictionary["friends_count"] as? Int
+        created_at = (dictionary["created_at"] as? NSString?)!
+
         
     }
     

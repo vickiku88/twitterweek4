@@ -24,6 +24,8 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 for tweet in tweets{
                     //print("t1 \(tweet.text)")
                 }
+            //print("t2")
+            self.tableView.reloadData()
         }, failure: { (error: Error) -> () in
                 print(error.localizedDescription)
             })
@@ -45,7 +47,10 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return 4
+        //print("printrows")
         if let tweets = tweets {
+            print("ok:\(tweets.count)")
+
             return tweets.count
         } else {
             return 0
@@ -55,8 +60,10 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
         //cell.delegate = self
-        //cell.tweet = tweets[indexPath.row]
+        //print(tweets[1])
+       // cell.tweet = tweets[indexPath.row]
             //print("try:\(cell.tweet)")
+        //print("cell")
         return cell
     }
     

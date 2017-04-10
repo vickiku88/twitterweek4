@@ -24,11 +24,12 @@ class TweetCell: UITableViewCell {
             }
             handleLabel.text = user?.screenname as String?
             descriptionLabel.text = user?.tagline as String?
-            //timeLabel.text = user?.
         }
     }
     var tweet: Tweet?{
         didSet{
+            //timeLabel.text = (tweet?.timestampString)! as String
+            
             
         }
     }

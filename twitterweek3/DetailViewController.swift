@@ -31,6 +31,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as! DetailCell
         //cell.delegate = self
+        //cell.user = User[indexPath.row]
         return cell
     }
 
