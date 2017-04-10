@@ -167,10 +167,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New" id="YfP-P8-ebT">
                             <connections>
-                                <segue destination="NGO-TE-52E" kind="presentation" id="T80-pr-rvU"/>
+                                <segue destination="NGO-TE-52E" kind="presentation" id="Xe3-Bd-9Xh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Awd-pV-4ya" id="ntx-DU-zO5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewQ-rM-qaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -321,6 +324,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Home" id="JUM-Am-h7G"/>
                         <barButtonItem key="rightBarButtonItem" title="Reply" id="Bux-gV-dKE"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="whR-LY-fRI" id="Cac-L6-3FC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrC-WK-q3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -362,10 +368,10 @@
             </objects>
             <point key="canvasLocation" x="2599.1999999999998" y="111.0944527736132"/>
         </scene>
-        <!--New Tweet Cell-->
+        <!--New Tweet View Controller-->
         <scene sceneID="J7n-ki-Ga3">
             <objects>
-                <viewController id="0TA-Oa-90s" customClass="NewTweetCell" sceneMemberID="viewController">
+                <viewController id="0TA-Oa-90s" customClass="NewTweetViewController" customModule="twitterweek3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3h9-gw-aCI"/>
                         <viewControllerLayoutGuide type="bottom" id="I1k-cG-EXR"/>
@@ -404,11 +410,14 @@
                     <navigationItem key="navigationItem" id="Img-IY-tUg">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="7Ll-Oi-C9n">
                             <connections>
-                                <action selector="onCancel:" destination="0TA-Oa-90s" id="c83-f3-lJ0"/>
+                                <action selector="onCancelButton:" destination="0TA-Oa-90s" id="ZZf-hH-Qba"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="ZeM-fI-5Y2"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="bgw-De-0Ja" id="PYb-hn-2Wq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EyM-NT-niv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -31,6 +31,8 @@ class DetailCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        detProfURL.layer.cornerRadius = 3
+        detProfURL.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

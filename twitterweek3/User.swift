@@ -18,8 +18,10 @@ class User: NSObject {
     var tagline: NSString?
     var dictionary: NSDictionary?
     
+    var followersCount: Int?
+    var followingCount: Int?
+    
     init(dictionary: NSDictionary) {
-        
         self.dictionary = dictionary
         name = dictionary["name"] as? NSString
         screenname = dictionary["screen_name"] as? NSString
@@ -28,9 +30,12 @@ class User: NSObject {
             profileUrl = URL(string: profileUrlString)
         }
         tagline = dictionary["description"] as? NSString
+        followersCount = dictionary["followers_count"] as? Int
+        followingCount = dictionary["friends_count"] as? Int
+        
     }
+    
     static let UserDidLogoutNotification = "userDidLogout"
-
     static var _currentUser: User?
     static var currentUser: User? {
         get {
@@ -53,6 +58,7 @@ class User: NSObject {
         }
         set (user){
             _currentUser = user
+            //User.currentUser = self
             let defaults = UserDefaults.standard
             if let user = user {
                 let data =  try! JSONSerialization.data(withJSONObject: user.dictionary!, options : [])
