@@ -13,10 +13,13 @@ class TweetsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+
+        
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) -> () in
             self.tweets = tweets
                 for tweet in tweets{
-                    //print(tweet.text)
+                    //print("t1 \(tweet.text)")
                 }
         }, failure: { (error: Error) -> () in
                 print(error.localizedDescription)
@@ -34,8 +37,22 @@ class TweetsViewController: UIViewController {
         TwitterClient.sharedInstance?.logout()
         
     }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(tweets.count)
+        return tweets.count
 
-    /*
+        return self.tweets.count
+    }
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
+        //cell.delegate = self
+        cell.tweet = tweets[indexPath.row]
+        print("try:\(cell.tweet)")
+        return cell
+    }
+
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

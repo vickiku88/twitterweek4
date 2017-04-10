@@ -1,14 +1,14 @@
 //
-//  DetailViewController.swift
+//  NewTweetViewController.swift
 //  twitterweek3
 //
-//  Created by Victoria Ku on 4/8/17.
+//  Created by Victoria Ku on 4/9/17.
 //  Copyright © 2017 Codepath. All rights reserved.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class NewTweetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +21,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as! DetailCell
-        //cell.delegate = self
-        return cell
-    }
-
+  
     /*
     // MARK: - Navigation
 

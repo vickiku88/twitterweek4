@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailCell: UITableViewCell {
+    
 
     @IBOutlet weak var detProfURL: UIImageView!
     @IBOutlet weak var detNameLabel: UILabel!
@@ -21,12 +22,10 @@ class DetailCell: UITableViewCell {
     
     var user: User?{
         didSet{
-            detNameLabel.text = 
-            detHandleLabel.text = User?.screenname
-        detProfURL.setImageWithURL(User?.profileUrl)
-        detDesription.text = User?.description
-            
-            
+                detNameLabel.text = user?.name as String?
+                detHandleLabel.text = user?.screenname as String?
+                detProfURL.setImageWith((user?.profileUrl)!)
+                detDesription.text = user?.tagline as String?
         }
     }
     override func awakeFromNib() {

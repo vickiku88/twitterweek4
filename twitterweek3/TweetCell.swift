@@ -18,11 +18,20 @@ class TweetCell: UITableViewCell {
     
     var user: User? {
         didSet{
-            nameLabel.text = User?.name
+            nameLabel.text = user?.name as String?
+            if (user?.profileUrl) != nil{
+                profileImg.setImageWith((user?.profileUrl)!)
+            }
+            handleLabel.text = user?.screenname as String?
+            descriptionLabel.text = user?.tagline as String?
+            //timeLabel.text = user?.
+        }
+    }
+    var tweet: Tweet?{
+        didSet{
             
         }
     }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
