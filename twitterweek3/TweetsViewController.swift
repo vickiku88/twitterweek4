@@ -44,18 +44,18 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-        /*if let tweets = tweets {
+        //return 4
+        if let tweets = tweets {
             return tweets.count
         } else {
             return 0
-        }*/
+        }
 
     }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
         //cell.delegate = self
-        //cell.tweet = user[indexPath.row]
+        //cell.tweet = tweets[indexPath.row]
             //print("try:\(cell.tweet)")
         return cell
     }
