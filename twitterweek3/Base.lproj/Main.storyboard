@@ -80,25 +80,25 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@vixxku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qu-dE-VpG">
-                                                    <rect key="frame" x="154" y="12" width="64" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="154" y="12" width="56.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V35-7r-Nuf">
-                                                    <rect key="frame" x="105" y="45" width="88" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="105" y="42" width="262" height="63"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyg-a9-4O7">
-                                                    <rect key="frame" x="331" y="12" width="34" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="335" y="12" width="30" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reply" translatesAutoresizingMaskIntoConstraints="NO" id="THy-EK-5Dl">
-                                                    <rect key="frame" x="107.5" y="108" width="24" height="18"/>
+                                                    <rect key="frame" x="107.5" y="105" width="24" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="2HB-fs-jeh"/>
                                                         <constraint firstAttribute="height" constant="18" id="5ED-rU-gqC"/>
@@ -112,7 +112,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retweet" translatesAutoresizingMaskIntoConstraints="NO" id="7Fg-Iy-Vpj">
-                                                    <rect key="frame" x="198" y="106" width="28" height="24"/>
+                                                    <rect key="frame" x="198" y="103" width="28" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="28" id="O4A-Q7-ldl"/>
                                                         <constraint firstAttribute="height" constant="24" id="QMe-Wo-oIC"/>
@@ -120,12 +120,15 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="THy-EK-5Dl" firstAttribute="top" secondItem="V35-7r-Nuf" secondAttribute="bottom" constant="42" id="0Q0-nB-bkW"/>
+                                                <constraint firstItem="THy-EK-5Dl" firstAttribute="top" secondItem="V35-7r-Nuf" secondAttribute="bottom" id="0Q0-nB-bkW"/>
                                                 <constraint firstItem="V35-7r-Nuf" firstAttribute="top" secondItem="1qu-dE-VpG" secondAttribute="bottom" constant="12" id="22J-KN-tm9"/>
                                                 <constraint firstItem="Yyg-a9-4O7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1qu-dE-VpG" secondAttribute="trailing" constant="8" id="3RA-vx-tgp"/>
                                                 <constraint firstAttribute="trailing" secondItem="sMu-2n-yWv" secondAttribute="trailing" constant="55" id="AWP-M8-00y"/>
                                                 <constraint firstItem="1qu-dE-VpG" firstAttribute="leading" secondItem="lDT-lk-AaS" secondAttribute="trailing" constant="12.5" id="BGR-2T-cwJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Fg-Iy-Vpj" secondAttribute="bottom" id="CgS-h8-pTQ"/>
                                                 <constraint firstItem="7Fg-Iy-Vpj" firstAttribute="top" secondItem="1qu-dE-VpG" secondAttribute="bottom" constant="73" id="GAH-5e-ejf"/>
+                                                <constraint firstAttribute="trailing" secondItem="V35-7r-Nuf" secondAttribute="trailing" constant="8" id="Jjy-7b-cSU"/>
+                                                <constraint firstAttribute="bottom" secondItem="sMu-2n-yWv" secondAttribute="bottom" id="POd-uq-9KJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="Yyg-a9-4O7" secondAttribute="trailing" constant="10" id="Rdc-OU-IzO"/>
                                                 <constraint firstItem="1qu-dE-VpG" firstAttribute="top" secondItem="JhI-58-IMh" secondAttribute="top" constant="12" id="XZ7-nI-kxh"/>
                                                 <constraint firstItem="lDT-lk-AaS" firstAttribute="leading" secondItem="sQv-4M-TU7" secondAttribute="trailing" constant="10" id="aDb-12-xVq"/>
@@ -137,15 +140,15 @@
                                                 <constraint firstItem="7Fg-Iy-Vpj" firstAttribute="leading" secondItem="THy-EK-5Dl" secondAttribute="trailing" constant="66.5" id="lQT-ul-x8l"/>
                                                 <constraint firstItem="sMu-2n-yWv" firstAttribute="top" secondItem="JhI-58-IMh" secondAttribute="top" constant="106" id="ooK-rb-1H6"/>
                                                 <constraint firstItem="lDT-lk-AaS" firstAttribute="top" secondItem="JhI-58-IMh" secondAttribute="top" constant="12" id="r4U-Yl-I4a"/>
+                                                <constraint firstAttribute="bottom" secondItem="THy-EK-5Dl" secondAttribute="bottom" constant="4" id="sJ7-ss-L5b"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="V35-7r-Nuf" id="f8Q-eK-bOP"/>
                                             <outlet property="handleLabel" destination="1qu-dE-VpG" id="9jf-uW-4WR"/>
                                             <outlet property="nameLabel" destination="lDT-lk-AaS" id="Jwd-Wy-uvB"/>
-                                            <outlet property="profileImg" destination="sQv-4M-TU7" id="4Lf-aS-p03"/>
+                                            <outlet property="profileImgView" destination="sQv-4M-TU7" id="0M4-yx-4dm"/>
                                             <outlet property="timeLabel" destination="Yyg-a9-4O7" id="spU-No-TpT"/>
-                                            <segue destination="5sT-4X-smS" kind="presentation" id="T9J-AN-2Ws"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -305,7 +308,7 @@
                                             <outlet property="detNameLabel" destination="eJh-SO-LBq" id="kQz-WV-VVt"/>
                                             <outlet property="detNumFav" destination="ZA0-HN-dy8" id="hKK-6U-t0a"/>
                                             <outlet property="detNumRetweet" destination="Isx-32-yJD" id="WIQ-CX-Bak"/>
-                                            <outlet property="detProfURL" destination="WjE-Py-XCW" id="K1c-G9-bmW"/>
+                                            <outlet property="detProfURLView" destination="WjE-Py-XCW" id="4oY-aV-w1J"/>
                                             <outlet property="detTimeLabel" destination="4Tk-lm-Una" id="j4i-Pc-k9P"/>
                                         </connections>
                                     </tableViewCell>

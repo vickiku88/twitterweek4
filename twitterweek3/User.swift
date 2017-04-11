@@ -51,8 +51,6 @@ class User: NSObject {
 
                     //let dictionary = try JSONSerialization.jsonObject(with: userData as Data, options: []) as! NSDictionary
                       let  dictionary = try! JSONSerialization.jsonObject(with: userData as Data, options: []) as! NSDictionary
-                    
-                    //let dictionary = try JSONSerialization.jsonObject(with: userData as Data, options: []) as! NSDictionary
 
                     _currentUser = User(dictionary: dictionary)
                 }
@@ -75,6 +73,18 @@ class User: NSObject {
         }
         
     }
+    
+    func saveCurrentUserData(){
+        do{
+            print("did")
+            let userData = try JSONSerialization.data(withJSONObject: dictionary, options: [])
+            UserDefaults.standard.set(userData, forKey: "currentUserData")
+        }catch{
+            print("can't")
+        }
+    }
+
+    
 
 
 

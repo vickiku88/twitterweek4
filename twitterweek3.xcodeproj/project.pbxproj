@@ -21,6 +21,7 @@
 		5B4AF0E81E9A9B720023767E /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0E71E9A9B720023767E /* DetailCell.swift */; };
 		5B4AF0EA1E9B06950023767E /* NewTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0E91E9B06950023767E /* NewTweetViewController.swift */; };
 		5B4AF0EC1E9B06B70023767E /* NewTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0EB1E9B06B70023767E /* NewTweetCell.swift */; };
+		5B4AF0F01E9C74DC0023767E /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0EF1E9C74DC0023767E /* TwitterLogin.swift */; };
 		C008DE7A18F991F315948CA4 /* Pods_twitterweek3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D37FCC7ADE6750FEB0009B8 /* Pods_twitterweek3.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		5B4AF0E71E9A9B720023767E /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		5B4AF0E91E9B06950023767E /* NewTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTweetViewController.swift; sourceTree = "<group>"; };
 		5B4AF0EB1E9B06B70023767E /* NewTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTweetCell.swift; sourceTree = "<group>"; };
+		5B4AF0EF1E9C74DC0023767E /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
 		B2E7BA08C03EE523561B33D7 /* Pods-twitterweek3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitterweek3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitterweek3/Pods-twitterweek3.debug.xcconfig"; sourceTree = "<group>"; };
 		F862A244A36507A18241308E /* Pods-twitterweek3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitterweek3.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitterweek3/Pods-twitterweek3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 				5B4AF0AB1E94682A0023767E /* LaunchScreen.storyboard */,
 				5B4AF0AE1E94682A0023767E /* Info.plist */,
 				5B4AF0BC1E95A64E0023767E /* TwitterClient.swift */,
+				5B4AF0EF1E9C74DC0023767E /* TwitterLogin.swift */,
 			);
 			path = twitterweek3;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4AF0B91E9595700023767E /* User.swift in Sources */,
+				5B4AF0F01E9C74DC0023767E /* TwitterLogin.swift in Sources */,
 				5B4AF0E01E99B0830023767E /* TweetCell.swift in Sources */,
 				5B4AF0EC1E9B06B70023767E /* NewTweetCell.swift in Sources */,
 				5B4AF0E81E9A9B720023767E /* DetailCell.swift in Sources */,

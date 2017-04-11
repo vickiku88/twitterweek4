@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking
 
 class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -18,6 +19,9 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
+
         
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) -> () in
             self.tweets = tweets
@@ -32,6 +36,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         // Do any additional setup after loading the view.
         
+            
 
     }
     
@@ -44,12 +49,20 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         TwitterClient.sharedInstance?.logout()
         
     }
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailViewController.tweet = tweets[indexPath.row]
+        navigationController?.pushViewController(detailViewController, animated: true)
+
+    }
+    
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return 4
         //print("printrows")
         if let tweets = tweets {
-            print("ok:\(tweets.count)")
+           // print("ok:\(tweets.count)")
 
             return tweets.count
         } else {
@@ -61,7 +74,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
         //cell.delegate = self
         //print(tweets[1])
-       // cell.tweet = tweets[indexPath.row]
+        cell.tweet = tweets[indexPath.row]
             //print("try:\(cell.tweet)")
         //print("cell")
         return cell
@@ -77,5 +90,6 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }

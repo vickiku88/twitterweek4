@@ -11,6 +11,8 @@ import UIKit
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    var tweet: Tweet?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +20,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
 
         // Do any additional setup after loading the view.
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,18 +35,19 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as! DetailCell
         //cell.delegate = self
-        //cell.user = User[indexPath.row]
+        cell.tweet = self.tweet
+        
         return cell
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+    //}
+    
 
 }

@@ -15,6 +15,9 @@ class TwitterClient: BDBOAuth1SessionManager {
     var loginSuccess: (() -> ())?
     var loginFailure: ((Error) -> ())?
     
+  
+
+    
     func homeTimeline(success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> ()) {
         get("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: { (task:URLSessionDataTask, response: Any?) in
             let dictionaries = response as! [NSDictionary]
@@ -80,6 +83,7 @@ class TwitterClient: BDBOAuth1SessionManager {
     }
     
     func handleOpenUrl(url: URL) {
+
         let requestToken = BDBOAuth1Credential(queryString: url.query)
         
         fetchAccessToken(withPath: "oauth/access_token"
@@ -94,6 +98,8 @@ class TwitterClient: BDBOAuth1SessionManager {
 
                 })
                 self.loginSuccess?()
+
+
         }, failure: { (error: Error?) in
             print("error: \(error?.localizedDescription)")
             if let error = error {
