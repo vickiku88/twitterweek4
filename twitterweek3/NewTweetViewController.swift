@@ -32,7 +32,7 @@ class NewTweetViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     @IBAction func onCancelButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion:nil)
     }
     
     /*

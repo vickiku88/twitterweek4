@@ -25,9 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "TweetsNavController")
                 window?.rootViewController = vc
-            } /*else {
+            } else {
                 print("there is no current user")
-            }*/
+            }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: User.UserDidLogoutNotification), object: nil, queue: OperationQueue.main) { (NSNotification) -> Void in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateInitialViewController()
@@ -65,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         print(url.description)
         TwitterClient.sharedInstance?.handleOpenUrl(url: url)
+        
         return true
     }
     

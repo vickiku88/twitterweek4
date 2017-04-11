@@ -28,7 +28,6 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 for tweet in tweets{
                     //print("t1 \(tweet.text)")
                 }
-            //print("t2")
             self.tableView.reloadData()
         }, failure: { (error: Error) -> () in
                 print(error.localizedDescription)
