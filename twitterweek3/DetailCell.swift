@@ -24,8 +24,11 @@ class DetailCell: UITableViewCell {
     var tweet: Tweet?{
         didSet{
             if let tweet = tweet{
-                if let timestampString = tweet.timestampString{
-                    detDateLabel.text = timestampString
+                if let timestampString = tweet.timestamp{
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "MM/dd/yy"
+                    detDateLabel.text = formatter.string(from: timestampString as Date)
+                    
                 }
                 if let text = tweet.text {
                     detDesription.text = text as String
@@ -39,6 +42,13 @@ class DetailCell: UITableViewCell {
                 if let profileImgURL = tweet.profileImg{
                     detProfURLView.setImageWith(profileImgURL)
                 }
+                //detNumRetweet.text = String(retweetCount)
+                detNumRetweet.text = String(tweet.retweetCount) + " retweets"
+                
+                //detNumFav.text = String(favoriteCount)
+                detNumFav.text = String(tweet.favoriteCount) + " favorites"
+                
+                
 
                 
             }

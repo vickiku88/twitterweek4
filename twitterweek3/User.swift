@@ -14,7 +14,7 @@ import UIKit
 class User: NSObject {
     var name: NSString?
     var screenname: NSString?
-    var profileUrl: URL?
+    var profileImg: URL?
     var tagline: NSString?
     var dictionary: NSDictionary?
     
@@ -26,10 +26,15 @@ class User: NSObject {
         self.dictionary = dictionary
         name = dictionary["name"] as? NSString
         screenname = dictionary["screen_name"] as? NSString
+        
         let profileUrlString  = dictionary["profile_image_url_https"] as? String
         if let profileUrlString = profileUrlString {
-            profileUrl = URL(string: profileUrlString)
+            profileImg = URL(string: profileUrlString)
+            //print("y \(profileImg)")
+        }else{
+            profileImg = nil
         }
+        
         tagline = dictionary["description"] as? NSString
         followersCount = dictionary["followers_count"] as? Int
         followingCount = dictionary["friends_count"] as? Int

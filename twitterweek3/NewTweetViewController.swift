@@ -9,12 +9,20 @@
 import UIKit
 
 class NewTweetViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    var user: User?
+    
     @IBOutlet weak var tableView: UITableView!
+    /*
+    @IBOutlet weak var profileURLView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var handleLabel: UILabel!*/
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+
         
         // Do any additional setup after loading the view.
     }
@@ -28,11 +36,13 @@ class NewTweetViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewTweetCell", for: indexPath) as! NewTweetCell
+        cell.user = self.user
         //cell.delegate = self
         return cell
     }
     @IBAction func onCancelButton(_ sender: Any) {
-        dismiss(animated: true, completion:nil)
+        navigationController?.popViewController(animated: true)
+
     }
     
     /*

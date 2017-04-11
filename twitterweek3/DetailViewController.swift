@@ -23,10 +23,14 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
 
     }
+    @IBAction func onReply(_ sender: Any) {
+        
+    }
 
     @IBAction func onHomeButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

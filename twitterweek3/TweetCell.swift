@@ -33,7 +33,11 @@ class TweetCell: UITableViewCell {
         didSet{
             
             if let tweet = tweet{
-                if let timestampString = tweet.timestampString{
+                
+                if let timestampString = tweet.timestamp{
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "MM/dd/yy"
+                    timeLabel.text = formatter.string(from: timestampString as Date)
                     //timeLabel.text = timestampString
                 }
                 if let text = tweet.text {

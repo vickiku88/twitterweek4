@@ -13,6 +13,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     var tweets: [Tweet]!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +35,26 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             })
 
         // Do any additional setup after loading the view.
+        TwitterClient.sharedInstance?.currentAccount(success: {(user:User?)-> () in
+            self.user = user
+        }, failure: { (error:Error) in
+                print(error.localizedDescription)
+        })
         
-            
 
     }
+    @IBAction func onNew(_ sender: Any) {
+        TwitterClient.sharedInstance?.currentAccount(success: {(user: User) -> () in
+            self.user = user
+            print("xx \(user)")
+        }, failure: { (error:Error) in
+            print(error.localizedDescription)
+        })
+        let newTweetViewController = storyboard?.instantiateViewController(withIdentifier: "NewTweetViewController") as! NewTweetViewController
+        newTweetViewController.user = user
+        navigationController?.pushViewController(newTweetViewController, animated: true)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
