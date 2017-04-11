@@ -74,6 +74,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //cell.delegate = self
         //print(tweets[1])
         cell.tweet = tweets[indexPath.row]
+        cell.layoutIfNeeded()
             //print("try:\(cell.tweet)")
         //print("cell")
         return cell

@@ -34,7 +34,7 @@ class DetailCell: UITableViewCell {
                     detNameLabel.text = name
                 }
                 if let screenname = tweet.screenname{
-                    detHandleLabel.text = screenname
+                    detHandleLabel.text = "@" + screenname
                 }
                 if let profileImgURL = tweet.profileImg{
                     detProfURLView.setImageWith(profileImgURL)

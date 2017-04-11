@@ -52,10 +52,12 @@ class TweetCell: UITableViewCell {
                     profileImgView.setImageWith(profileImgURL)
                     //print(profileImgView)
                 }
+                self.descriptionLabel.sizeToFit()
 
             }
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
