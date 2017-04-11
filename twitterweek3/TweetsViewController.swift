@@ -8,21 +8,26 @@
 
 import UIKit
 import AFNetworking
+import MBProgressHUD
 
-class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var tweets: [Tweet]!
     var user: User!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
-
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) -> () in
             self.tweets = tweets
@@ -40,9 +45,33 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }, failure: { (error:Error) in
                 print(error.localizedDescription)
         })
+       
         
+    }//view did load
+    
 
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        
     }
+
+    func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) -> () in
+            self.tweets = tweets
+            self.tableView.reloadData()
+            
+
+
+        }, failure: { (error: Error) -> () in
+            print(error.localizedDescription)
+        })
+        
+            // Reload the tableView now that there is new data
+            
+            // Tell the refreshControl to stop spinning
+            refreshControl.endRefreshing()
+        }
+    
     @IBAction func onNew(_ sender: Any) {
         TwitterClient.sharedInstance?.currentAccount(success: {(user: User) -> () in
             self.user = user
