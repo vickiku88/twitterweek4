@@ -25,7 +25,7 @@ class DetailCell: UITableViewCell {
         didSet{
             if let tweet = tweet{
                 if let timestampString = tweet.timestampString{
-                    detTimeLabel.text = timestampString
+                    detDateLabel.text = timestampString
                 }
                 if let text = tweet.text {
                     detDesription.text = text as String
