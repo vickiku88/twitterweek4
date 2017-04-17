@@ -620,11 +620,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitterweek3/MenuViewController.swift"
-            timestampString = "514080489.81143"
+            timestampString = "514085001.981974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "MenuViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -702,6 +702,222 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "twitterweek3/MenuViewController.swift"
+            timestampString = "514084332.376419"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MenuViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.__deallocating_deinit"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.395502"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.init (style : __C.UITableViewStyle) -&gt; twitterweek3.MenuViewController"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.398714"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.__allocating_init (style : __C.UITableViewStyle) -&gt; twitterweek3.MenuViewController"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.402974"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; twitterweek3.MenuViewController"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.404721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; twitterweek3.MenuViewController"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.406684"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;twitterweek3.MenuViewController&gt;"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.408226"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;twitterweek3.MenuViewController&gt;"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.409495"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "twitterweek3/MenuViewController.swift"
+            timestampString = "514084333.086511"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "MenuViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.(profileNavigationController in _BA00D0222C6BC151E28136E635088A1F).getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIViewController&gt;"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.63445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.(profileNavigationController in _BA00D0222C6BC151E28136E635088A1F).setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIViewController&gt;"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.635777"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.init (style : __C.UITableViewStyle) -&gt; twitterweek3.MenuViewController"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.63703"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; twitterweek3.MenuViewController"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.638194"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "twitterweek3.MenuViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;twitterweek3.MenuViewController&gt;"
+                  moduleName = "twitterweek3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria_ku/Desktop/Playground/Swiftplayground/twitterweek3/twitterweek3/MenuViewController.swift"
+                  timestampString = "514084333.639456"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
                   offsetFromSymbolStart = "31">
                </Location>
             </Locations>
