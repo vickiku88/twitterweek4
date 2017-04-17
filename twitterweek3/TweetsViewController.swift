@@ -31,9 +31,9 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) -> () in
             self.tweets = tweets
-                for tweet in tweets{
+                /*for tweet in tweets{
                     //print("t1 \(tweet.text)")
-                }
+                }*/
             self.tableView.reloadData()
         }, failure: { (error: Error) -> () in
                 print(error.localizedDescription)
@@ -49,7 +49,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }//view did load
     
-
+////ths is supposed to be the infinite scroll part
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         
@@ -58,24 +58,29 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) -> () in
             self.tweets = tweets
-            self.tableView.reloadData()
             
-
-
-        }, failure: { (error: Error) -> () in
-            print(error.localizedDescription)
-        })
-        
             // Reload the tableView now that there is new data
+            self.tableView.reloadData()
             
             // Tell the refreshControl to stop spinning
             refreshControl.endRefreshing()
+
+        }, failure: { (error: Error) -> () in
+            print(error.localizedDescription)
+            // Reload the tableView now that there is new data
+            self.tableView.reloadData()
+            
+            // Tell the refreshControl to stop spinning
+            refreshControl.endRefreshing()
+        })
+        
+        
         }
     
     @IBAction func onNew(_ sender: Any) {
         TwitterClient.sharedInstance?.currentAccount(success: {(user: User) -> () in
             self.user = user
-            print("xx \(user)")
+            //print("xx \(user)")
         }, failure: { (error:Error) in
             print(error.localizedDescription)
         })

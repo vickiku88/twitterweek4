@@ -78,15 +78,7 @@ class User: NSObject {
         
     }
     
-    func saveCurrentUserData(){
-        do{
-            print("did")
-            let userData = try JSONSerialization.data(withJSONObject: dictionary, options: [])
-            UserDefaults.standard.set(userData, forKey: "currentUserData")
-        }catch{
-            print("can't")
-        }
-    }
+   
 
     
 

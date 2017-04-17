@@ -10,6 +10,11 @@ import UIKit
 
 class MiniMenuCell: UITableViewCell {
 
+    @IBOutlet weak var iconUrl: UIImageView!
+    @IBOutlet weak var menuLinkLAbel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

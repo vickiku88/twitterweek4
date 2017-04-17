@@ -17,14 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let hamburgerViewcontroller = window!.rootViewController as! HamburgerViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
         
             if User.currentUser != nil {
                 print("there is a current user")
                 
                 //if there is a current user,skip past and go straight to TweetsNavVC
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "TweetsNavController")
-                window?.rootViewController = vc
+                /*let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "HamburgerViewController")
+                window?.rootViewController = vc*/
+                
+                
+               
+
+                
             } else {
                 print("there is no current user")
             }
