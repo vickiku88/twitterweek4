@@ -501,7 +501,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pg-Gu-Dwm" userLabel="Menu View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxj-lL-ZxM" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -643,7 +643,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fbN-vz-ygQ"/>
                     <connections>
-                        <outlet property="tableView" destination="aC3-0x-KMa" id="2KA-xS-9EZ"/>
+                        <outlet property="tableView" destination="aC3-0x-KMa" id="8Rb-U3-PgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTc-tk-Zso" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -863,7 +863,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hEv-AA-YNq">
             <objects>
-                <navigationController storyboardIdentifier="ProfileVC" automaticallyAdjustsScrollViewInsets="NO" id="Bc9-RJ-lhZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Bc9-RJ-lhZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IOL-zA-Eyi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

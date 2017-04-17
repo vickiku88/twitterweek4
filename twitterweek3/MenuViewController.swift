@@ -8,8 +8,9 @@
 
 import UIKit
 
-class MenuViewController: UITableViewController  {
+class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
+    @IBOutlet weak var tableView: UITableView!
     
     private var profileNavigationController: UIViewController!
     private var homeNavigationController: UIViewController!
@@ -24,8 +25,8 @@ class MenuViewController: UITableViewController  {
         tableView.dataSource = self
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        profileNavigationController = storyboard.instantiateViewController(withIdentifier: "profileNavigationController")
-        homeNavigationController = storyboard.instantiateViewController(withIdentifier: "homeNavigationController")
+        profileNavigationController = storyboard.instantiateViewController(withIdentifier: "ProfileNavigationController")
+        homeNavigationController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
         mentionNavigationController = storyboard.instantiateViewController(withIdentifier: "mentionNavigationController")
         
         viewControllers.append(profileNavigationController)
@@ -49,18 +50,18 @@ class MenuViewController: UITableViewController  {
         return 3
     }*/
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MiniMenuCell", for: indexPath) as! MiniMenuCell
         let titles = ["Profile","Mentions","Home"]
         cell.menuLinkLAbel.text = titles[indexPath.row]
         // Configure the cell...
-
+        
         return cell
     }
  
