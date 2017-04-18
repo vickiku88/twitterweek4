@@ -27,7 +27,18 @@ class LoginViewController: UIViewController {
         
         client?.login(success: {
             print("successful login")
-           self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            let appDelegate = UIApplication.shared.delegate!
+            
+           //self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+            let hamburgerViewController = storyboard.instantiateViewController(withIdentifier: "HamburgerViewController") as! HamburgerViewController
+            menuViewController.hamburgerViewController = hamburgerViewController
+            hamburgerViewController.menuViewController = menuViewController
+            
+            appDelegate.window??.rootViewController = hamburgerViewController
+
+            
             
         }, failure: { (error: Error) in
             print("error \(error.localizedDescription)")

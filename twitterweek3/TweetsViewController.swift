@@ -39,12 +39,12 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 print(error.localizedDescription)
             })
 
-        // Do any additional setup after loading the view.
-        TwitterClient.sharedInstance?.currentAccount(success: {(user:User?)-> () in
-            self.user = user
-        }, failure: { (error:Error) in
-                print(error.localizedDescription)
-        })
+//        // Do any additional setup after loading the view.
+//        TwitterClient.sharedInstance?.currentAccount(success: {(user:User?)-> () in
+//            self.user = user
+//        }, failure: { (error:Error) in
+//                print(error.localizedDescription)
+//        })
        
         
     }//view did load

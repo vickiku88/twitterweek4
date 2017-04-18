@@ -21,6 +21,8 @@ class User: NSObject {
     var followersCount: Int?
     var followingCount: Int?
     var created_at: NSString?
+    var profileBackgroundImg: URL?
+    var lcount: Int?
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
@@ -34,12 +36,19 @@ class User: NSObject {
         }else{
             profileImg = nil
         }
+        let profileBackgroundString = dictionary["profile_background_image_url_https"] as? String
+        if let profileBackgroundString = profileBackgroundString {
+            profileBackgroundImg = URL(string: profileBackgroundString)
+        } else {
+            profileBackgroundImg = nil
+        }
+        
         
         tagline = dictionary["description"] as? NSString
         followersCount = dictionary["followers_count"] as? Int
         followingCount = dictionary["friends_count"] as? Int
         created_at = (dictionary["created_at"] as? NSString?)!
-
+        lcount = dictionary["listed_count"] as? Int
         
     }
     
@@ -63,7 +72,6 @@ class User: NSObject {
         }
         set (user){
             _currentUser = user
-            //User.currentUser = self
             let defaults = UserDefaults.standard
             if let user = user {
                 let data =  try! JSONSerialization.data(withJSONObject: user.dictionary!, options : [])
@@ -72,7 +80,6 @@ class User: NSObject {
                 defaults.removeObject(forKey:"currentUserData")
             }
             
-            //defaults.set(user, forKey:"currentUser")
             defaults.synchronize()
         }
         

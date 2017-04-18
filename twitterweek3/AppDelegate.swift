@@ -17,31 +17,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let hamburgerViewcontroller = window!.rootViewController as! HamburgerViewController
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
         
-            if User.currentUser != nil {
-                print("there is a current user")
-                
-                //if there is a current user,skip past and go straight to TweetsNavVC
-                /*let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "HamburgerViewController")
-                window?.rootViewController = vc*/
-                
-                
-               
+       // let hamburgerViewController = window!.rootViewController as! HamburgerViewController
+        
 
-                
+        
+        if User.currentUser != nil {
+                print("there is a current user")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+            let hamburgerViewController = storyboard.instantiateViewController(withIdentifier: "HamburgerViewController") as! HamburgerViewController
+            
+            menuViewController.hamburgerViewController = hamburgerViewController
+            hamburgerViewController.menuViewController = menuViewController
+            
+            window?.rootViewController = hamburgerViewController
+                //if there is a current user,skip past and go straight to TweetsNavVC
+               /* let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "hamburgerNavigationController")
+                window?.rootViewController = vc*/
+            
+            /*
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+            let hamburgerViewcontroller = window!.rootViewController as! HamburgerViewController
+            let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+            menuViewController.hamburgerViewController = hamburgerViewcontroller
+            hamburgerViewcontroller.menuViewController = menuViewController*/
+            
+            
+            
+                // Go to the logged in screen
+            return true
             } else {
                 print("there is no current user")
             }
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: User.UserDidLogoutNotification), object: nil, queue: OperationQueue.main) { (NSNotification) -> Void in
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateInitialViewController()
             
             self.window?.rootViewController = vc
-        
+ 
         }
         
         return true

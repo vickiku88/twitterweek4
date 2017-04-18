@@ -1,4 +1,4 @@
-//
+/////
 //  TwitterClient.swift
 //  twitterweek3
 //
@@ -8,6 +8,7 @@
 
 import UIKit
 import BDBOAuth1Manager
+import AFNetworking
 
 class TwitterClient: BDBOAuth1SessionManager {
        static let sharedInstance = TwitterClient(baseURL: URL(string: "https://api.twitter.com")! as URL!, consumerKey: "WvnXSkai0wQPAJcAI9DsW9mMF", consumerSecret: "2d21wci9pC5szzeYfQyJ31gcUm757KTtQ6ISX28qfZWlJIG6JK")
@@ -38,18 +39,14 @@ class TwitterClient: BDBOAuth1SessionManager {
         get("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any) in
             let userDictionary = response as! NSDictionary
             let user = User(dictionary:userDictionary)
+            User.currentUser = user
+        
             success(user)
             
-            /*print("user \(user)")
-            print("stuff: \(user)")
-            print("name: \(user.name)")
-            print("screenname: \(user.screenname)")
-            print("profileURL: \(user.profileUrl)")
-            print("des: \(user.tagline)")*/
-            
         }, failure: { (task: URLSessionDataTask?, error: Error) in
-            print("error: \(error)")
-            failure(Error.self as! Error)
+            //print("error: \(error)")
+            print("error2: \(error.localizedDescription)")
+            failure(error)
         })
     }
     
@@ -88,9 +85,9 @@ class TwitterClient: BDBOAuth1SessionManager {
         
         fetchAccessToken(withPath: "oauth/access_token"
             , method: "POST", requestToken: requestToken, success: { (accessToken: BDBOAuth1Credential?) in
-                //print("I got the access token")
+                print("I got the access token")
                 self.currentAccount(success: { (user: User) in
-                    print(user)
+                    print("user \(user)")
                     User.currentUser = user
                     self.loginSuccess?()
                 }, failure: { (error: Error) in

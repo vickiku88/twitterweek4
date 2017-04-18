@@ -13,6 +13,20 @@ class MenuCellTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var user: User?{
+        didSet{
+            if let user = user{
+                self.nameLabel.text = user.name as String?
+                
+                if let screenname = user.tagline{
+                    self.descriptionLabel.text = screenname as String
+                }
+                if let profileImg = user.profileImg{
+                    profileURL.setImageWith(profileImg)
+                }
+            }
+        }
+    }
     
     
     override func awakeFromNib() {

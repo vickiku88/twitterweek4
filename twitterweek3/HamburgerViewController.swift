@@ -9,11 +9,15 @@
 import UIKit
 
 class HamburgerViewController: UIViewController {
+    @IBOutlet var tableView: UITableView!
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var leftMarginConstraint: NSLayoutConstraint!
     var originalLeftMargin: CGFloat!
+    var tweets: [Tweet]!
+    var user: User!
+    
     
     var menuViewController: UIViewController!{
         didSet{
@@ -22,15 +26,40 @@ class HamburgerViewController: UIViewController {
             
         }
     }
+    var contentViewController: UIViewController! {
+        didSet(oldcontentViewController){
+            view.layoutIfNeeded()
+            if oldcontentViewController != nil {
+                oldcontentViewController.willMove(toParentViewController: nil)
+                oldcontentViewController.view.removeFromSuperview()
+                oldcontentViewController.didMove(toParentViewController: nil)
+            }
+            contentViewController.willMove(toParentViewController: self)
+            contentView.addSubview(contentViewController.view)
+            contentViewController.didMove(toParentViewController: self)
+            UIView.animate(withDuration: 0.3) { 
+                self.leftMarginConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("load")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // self.navigationItem.rightBarButtonItem = 
+        
+        // Do any additional setup after loading the view.
+        TwitterClient.sharedInstance?.currentAccount(success: {(user:User?)-> () in
+            self.user = user
+        }, failure: { (error:Error) in
+            print(error.localizedDescription)
+        })
+
     }
 
     override func didReceiveMemoryWarning() {
